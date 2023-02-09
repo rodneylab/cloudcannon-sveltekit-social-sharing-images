@@ -60,6 +60,7 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta name="description" content={description} />
+	<link rel="canonical" href={url} />
 
 	<meta property="og:site_name" content="Svelte’s Homepage" />
 	<meta property="og:locale" content="en" />
@@ -67,11 +68,11 @@
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
-	<meta property="og:image" content={og_image} />
+	<meta property="og:image" content={`/assets/${og_image}`} />
 	<meta property="og:image:alt" content={image_alt} />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="627" />
-	
+
 	{@html jsonLdScript}
 </svelte:head>
 
